@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background-color: #ffffff;
+}
+
+
+
+.navbar {
+    height: 105px;
+
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10%;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    color: #172554;
+}
+
+.logo i {
+    font-size: 34px;
+
+    color: #123c78;
+}
+
+
+
+.hero {
+    min-height: 625px;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+
+
+.hero-left {
+    width: 54%;
+
+    min-height: 625px;
+
+    background-color: #03144f;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 12%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Slanted Shape */
+
+.hero-left::after {
+    content: "";
+
+    position: absolute;
+
+    top: -20px;
+
+    right: -90px;
+
+    width: 150px;
+
+    height: 700px;
+
+    background-color: #03144f;
+
+    transform: skewX(10deg);
+
+    z-index: 2;
+}
+
+
+/* Decorative Circle */
+
+.hero-left::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+
+    right: 70px;
+
+    top: 90px;
+}
+
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+
+.hero-content ul {
+    list-style: none;
+
+    padding: 0;
+}
+
+.hero-content li {
+    position: relative;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+
+    padding-left: 22px;
+}
+
+.hero-content li::before {
+    content: "•";
+
+    position: absolute;
+
+    left: 0;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+
+
+.hero-right {
+    width: 46%;
+
+    min-height: 625px;
+
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+.developer-image {
+    width: 100%;
+
+    max-width: 750px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    mix-blend-mode: multiply;
+}
+
+
+
+.github-section {
+    min-height: 180px;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+.github-section h2 {
+    font-size: 34px;
+
+    color: #54238a;
+}
+
+
+/* Github Button */
+
+.github-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 28px;
+
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.github-button:hover {
+    background-color: #1746a2;
+
+    transform: translateY(-2px);
+}
+
+
+
+.about {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background-color: #f5f7fb;
+}
+
+.about h2 {
+    font-size: 35px;
+
+    color: #172554;
+
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+
+footer {
+    background-color: #03144f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left {
+        min-height: 500px;
+
+        padding: 70px 10%;
+    }
+
+    .hero-left::after {
+        display: none;
+    }
+
+    .hero-right {
+        min-height: 500px;
+    }
+
+    .developer-image {
+        max-width: 700px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 80px;
+
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .logo i {
+        font-size: 27px;
+    }
+
+    .hero-left {
+        padding: 55px 30px;
+
+        min-height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content li {
+        font-size: 18px;
+    }
+
+    .hero-right {
+        min-height: 400px;
+    }
+
+    .github-section h2 {
+        font-size: 26px;
+
+        padding: 0 15px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}

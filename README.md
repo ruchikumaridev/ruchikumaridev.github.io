@@ -1,2 +1,2 @@
-# ruchikumari.github.io
+# ruchikumaridev.github.io
 Python Full Stack Developer | Building Web Applications
